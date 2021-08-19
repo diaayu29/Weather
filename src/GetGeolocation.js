@@ -6,14 +6,14 @@ function DisplayLocationInfo(position) {
        const latitude = position.coords.latitude;
        console.log('latitude : ' + latitude)
        console.log('longitude : ' + longitude)
-       fetch('http://api.weatherapi.com/v1/forecast.json?key=669aee55d3874a56939145654210208&q=' + latitude +"  " + longitude)
+       fetch('https://api.weatherapi.com/v1/forecast.json?key=669aee55d3874a56939145654210208&q=' + latitude +"  " + longitude)
        .then(response => response.json())
        .then(response => {
          
          ReactDOM.render(
           <div className="Show">
           <div className="Result-today">
-  <img src= {"http://" +response.current.condition.icon} alt={response.current.condition.text} />
+  <img src= {"https://" +response.current.condition.icon} alt={response.current.condition.text} />
   
   <div className="Satu">
   <h1>{response.current.temp_c} &deg; <span>C</span> </h1>
