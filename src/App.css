@@ -1,38 +1,226 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  line-height: 35px;
+  color: rgba(0,0,0,.8);
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url(./bg-pictures.jpg);
+  background-size: cover;
+  height: 1000px;
+  max-width: 2000px;
+}
+
+body:hover {
+  cursor: default;
+}
+
+.Description,
+.Show,
+.Description-weather {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Result-today {
+  background-color: #b9fffb81;
+  height: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.Result-today img {
+  height: 180px;
+  width: 180px;
+}
+
+.Result-today h2 span {
+  font-style: bold;
+  font-size: 20px;
+}
+
+.Search-column {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+} 
+
+.fa-search {
+  margin-left: 15px;
+}
+
+.fa-search:hover {
+  cursor: pointer;
+}
+
+.fas {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 40px;
+  width: 40%;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.Hourly p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Hourly-detail {
+  background-color: #b9fffbe8;
+  margin-right: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Cloud-representation,
+.Rainy {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Description-weather,
+.Hourly {
+    background-color: #b9fffb81;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 89%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Description-weather {
+  flex-wrap: wrap;
+  margin-top: 30px;
+  height: 370px;
+}
+
+.Description-weather p {
+  text-align: left;
+}
+
+.Description-weather .Wind-mph span,
+.Description-weather .Visibility span {
+  font-size: 18px;
+}
+
+.Description-weather .Moon-phase,
+.Cloud-representation p {
+  line-height: 25px;
+}
+
+.Humidity,
+.Wind-mph,
+.UV-Index,
+.Visibility,
+.Sunrise-sunset,
+.Moon-phase,
+.Wind-dir,
+.Moon-illumination {
+  background-color: #b9fffbe8;
+  border-radius: 10px;
+  height: 120px;
+  width: 150px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 23px;
+}
+
+.Highlight {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.Description {
+  flex-wrap: wrap;
+}
+
+
+@media(max-width: 1140px) {
+  body {
+    height: 1280px;
   }
-  to {
-    transform: rotate(360deg);
+  .Description-weather{
+    height: 570px;
+  }
+  .Hourly  {
+    height: 400px;
   }
 }
+
+@media (max-width: 920px) {
+  body {
+    height: 1500px;
+  }
+  .Description-weather{
+    height: 770px;
+  }
+  .Result-today {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  body {
+    height: 2100px;
+  }
+  .Result-today img {
+    display: block;
+    margin: auto;
+  }
+  .Result-today,
+  
+  .Description-weather {
+    margin: 40px;
+    text-align: center;
+    padding: 5px;
+  }
+  .Hourly,
+  .fa-cloud, 
+  .fa-umbrella {
+   display: none;
+  }
+  .Rainy, 
+  .Cloud-representation {
+    display: block;
+  }
+ .Description,
+ .Show,
+ .Description-weather {
+   display: block;
+ }
+ .Highlight {
+   margin: -20px 0 10px 30px;
+ }
+ .Description-weather {
+   margin: auto;
+   height: 1450px;
+ }
+ .Humidity,
+  .Wind-mph,
+  .UV-Index,
+  .Visibility,
+  .Sunrise-sunset,
+  .Moon-phase,
+  .Wind-dir,
+  .Moon-illumination {
+  margin: auto;
+  margin-top: 10px;
+  }
+}
+
+

@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import EnterSearch from './HandleClick'
 import './App.css';
+import DisplayLocationInfo from './GetGeolocation';
+
+
+
+
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Search-column">
+        <input placeholder="Search a city" className="Keyword"></input>
+        <i className="fas fa-search" onClick={EnterSearch}></i>
+      </div>
+        <div className="Result" id="Result"></div>
     </div>
   );
 }
 
-export default App;
+
+
+
+export default App
+
